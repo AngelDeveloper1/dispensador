@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Dispensador</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/full-slider.css">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+<body>
+  <script>
+  var map;
+  var myLatLng = {lat: 19.5120761, lng: -99.0400636}
+  function initMap() {
+    map = new google.maps.Map(
+      document.getElementById('map'),
+      {
+        center: myLatLng,
+        zoom: 15
+      });
+    	var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Tecnologico de Estudios Superiores de Ecatepec'
+      });
+    };
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Dispensador</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="active"><a href="contact.html">Contacto</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" placeholder="Email" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-success">Acceder</button>
+          <a href="#">Registro</a>
+        </form>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <h2></h2>
+  <div class="container">
+      <div class="row">
+        <h3>Contacto</h3>
+        <div class="col-md-6">
+          <form class="form-horizontal" role="form" method="post" action="index.php">
+            <div class="form-group">
+              <label for="name" class="col-sm-2 control-label">Nombre</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" value="">
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@domain.com" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message" class="col-sm-2 control-label">Mensaje</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" rows="4" name="message"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="human" name="human" placeholder="cual es el resultado">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <input id="submit" name="submit" type="submit" value="Enviar" class="btn btn-primary">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <! Will be used to display an alert to the user>
+                </div>
+            </div>
+          </form>
+        </div>
+        <div id="map" class="col-md-6" style="height:450px;">
+        </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; Proyec 2017	</p>
+      </footer>
+  </div>
+   <script src="js/jquery.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script>
+      $('.carousel').carousel({
+          interval: 5000
+      })
+   </script>
+   <script src="js/ie-emulation-modes-warning.js"></script>
+   <script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*
+ * Card component
+ */
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+	border-color: #3399CC;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background-color: #449d44;
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: #398439;
+}
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(12, 97, 33);
+}
+#map-canvas {
+  	width: 100%; 
+  	height: 300px;
+	margin: 0;
+	padding: 15px;
+}
+.row.vertical-divider {
+  overflow: hidden;
+}
+.row.vertical-divider > div[class^="col-"] {
+  text-align: center;
+  padding-bottom: 100px;
+  margin-bottom: -100px;
+  border-left: 3px solid #F2F7F9;
+  border-right: 3px solid #F2F7F9;
+}
+.row.vertical-divider div[class^="col-"]:first-child {
+  border-left: none;
+}
+.row.vertical-divider div[class^="col-"]:last-child {
+  border-right: none;
+}
+#page{
+	width:660px;
+	margin:140px auto 60px;
+}
+
+.item{
+	background: url("../img/shadow_wide.png") no-repeat center bottom;
+	padding-bottom: 6px;
+	display: inline-block;
+	margin-bottom: 30px;
+	position:relative;
+}
+
+.item .delete{
+	background:url('../img/delete_icon.png') no-repeat;
+	width:37px;
+	height:38px;
+	position:absolute;
+	cursor:pointer;
+	top:10px;
+	right:-80px
+}
+
+.item a{
+	background-color: #FAFAFA;
+	border: none;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.item:first-child .delete:before{
+	background:url('../img/tooltip.png') no-repeat;
+	content:'.';
+	text-indent:-9999px;
+	overflow:hidden;
+	width:145px;
+	height:90px;
+	position:absolute;
+	right:-110px;
+	top:-95px;
+}
+
+.item a img{
+	display:block;
+	border:none;
+}
+
+/* General styles */
+
+#footer{
+	background-color:#212121;
+	position:fixed;
+	width:100%;
+	height:70px;
+	bottom:0;
+	left:0;
+}
+
+#footer .tri{
+	border-color:transparent transparent #212121;
+	border-style:solid;
+	border-width:20px 17px;
+	height:0;
+	left:50%;
+	margin:-40px 0 0 -400px;
+	position:absolute;
+	top:0;
+	width:0;
+}
